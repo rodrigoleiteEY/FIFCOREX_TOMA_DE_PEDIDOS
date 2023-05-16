@@ -1,0 +1,16 @@
+{
+  "projectInfo": {
+    "projectName": "FIFCOREX_TOMA_DE_PEDIDOS",
+    "createdDate": "Tuesday, May 16, 2023 at 1:35:07 PM",
+    "regenerateProxyClassDate": ""
+  },
+  "cloudApplication": {
+    "cloudApplicationId": "MBS-Toma-De-Pedidos",
+    "destinations": [
+      {
+        "id": "Toma_de_pedidos"
+      }
+    ]
+  },
+  "msServerConfigurationName": "FIFCO_MOBILE_BTP"
+}

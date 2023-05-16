@@ -1,0 +1,2 @@
+rootProject.name = "FIFCOREX_TOMA_DE_PEDIDOS"
+include ':app'

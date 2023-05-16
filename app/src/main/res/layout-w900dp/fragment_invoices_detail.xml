@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.invoices.InvoicesActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.entitycontainer.Invoices" />
+        <variable name="invoices" type="Invoices"/>
+        <variable name="handler" type="com.company.fifcorex_toma_de_pedidos.mdui.invoices.InvoicesDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Kunnr"
+            app:valueText="@{invoices.getOptionalValue(Invoices.kunnr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Vbeln"
+            app:valueText="@{invoices.getOptionalValue(Invoices.vbeln).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Vfijo"
+            app:valueText="@{invoices.getOptionalValue(Invoices.vfijo).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Fkart"
+            app:valueText="@{invoices.getOptionalValue(Invoices.fkart).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Xref3"
+            app:valueText="@{invoices.getOptionalValue(Invoices.xref3).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Bldat"
+            app:valueText="@{invoices.getOptionalValue(Invoices.bldat).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Iimpr"
+            app:valueText="@{invoices.getOptionalValue(Invoices.iimpr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Zbd1t"
+            app:valueText="@{invoices.getOptionalValue(Invoices.zbd1t).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Name1"
+            app:valueText="@{invoices.getOptionalValue(Invoices.name1).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Mandt"
+            app:valueText="@{invoices.getOptionalValue(Invoices.mandt).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="CodResp"
+            app:valueText="@{invoices.getOptionalValue(Invoices.codResp).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Srtype"
+            app:valueText="@{invoices.getOptionalValue(Invoices.srtype).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Rstgr"
+            app:valueText="@{invoices.getOptionalValue(Invoices.rstgr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Wrbtr"
+            app:valueText="@{invoices.getOptionalValue(Invoices.wrbtr).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Blart"
+            app:valueText="@{invoices.getOptionalValue(Invoices.blart).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Stceg"
+            app:valueText="@{invoices.getOptionalValue(Invoices.stceg).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Filkd"
+            app:valueText="@{invoices.getOptionalValue(Invoices.filkd).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Ccbtc"
+            app:valueText="@{invoices.getOptionalValue(Invoices.ccbtc).toString()}" />
+
+    </LinearLayout>
+</layout>

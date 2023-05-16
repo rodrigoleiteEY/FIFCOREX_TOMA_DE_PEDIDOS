@@ -1,0 +1,22 @@
+<resources  xmlns:tools="http://schemas.android.com/tools"
+             tools:ignore="MissingTranslation" >
+    <string name="application_name">FIFCOREX_TOMA_DE_PEDIDOS</string>
+    <string name="eset_credit">Credit</string>
+    <string name="eset_credit_single">Credit</string>
+    <string name="eset_customerproducts">CustomerProducts</string>
+    <string name="eset_customerproducts_single">CustomerProducts</string>
+    <string name="eset_customerpromotions">CustomerPromotions</string>
+    <string name="eset_customerpromotions_single">CustomerPromotions</string>
+    <string name="eset_customers">Customers</string>
+    <string name="eset_customers_single">Customers</string>
+    <string name="eset_invoices">Invoices</string>
+    <string name="eset_invoices_single">Invoices</string>
+    <string name="eset_ordersheader">OrdersHeader</string>
+    <string name="eset_ordersheader_single">OrdersHeader</string>
+    <string name="eset_ordersitem">OrdersItem</string>
+    <string name="eset_ordersitem_single">OrdersItem</string>
+    <string name="eset_products">Products</string>
+    <string name="eset_products_single">Products</string>
+    <string name="eset_promotions">Promotions</string>
+    <string name="eset_promotions_single">Promotions</string>
+</resources>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.products.ProductsActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.entitycontainer.Products" />
+        <variable name="products" type="Products"/>
+        <variable name="handler" type="com.company.fifcorex_toma_de_pedidos.mdui.products.ProductsDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ProductID"
+            app:valueText="@{products.getOptionalValue(Products.productID).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Name"
+            app:valueText="@{products.getOptionalValue(Products.name).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Category"
+            app:valueText="@{products.getOptionalValue(Products.category).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="SalesUnit"
+            app:valueText="@{products.getOptionalValue(Products.salesUnit).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="DistributionCenter"
+            app:valueText="@{products.getOptionalValue(Products.distributionCenter).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="FullBox"
+            app:valueText="@{products.getOptionalValue(Products.fullBox).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MinimumBoxAmount"
+            app:valueText="@{products.getOptionalValue(Products.minimumBoxAmount).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="IsActive"
+            app:valueText="@{products.getOptionalValue(Products.isActive).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="MaterialGroup"
+            app:valueText="@{products.getOptionalValue(Products.materialGroup).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="Weight"
+            app:valueText="@{products.getOptionalValue(Products.weight).toString()}" />
+
+        <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:keyText="ContainerID"
+            app:valueText="@{products.getOptionalValue(Products.containerID).toString()}" />
+
+    </LinearLayout>
+</layout>

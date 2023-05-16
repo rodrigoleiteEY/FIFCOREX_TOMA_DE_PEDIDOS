@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="TomaPedidosService" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Customers" EntityType="TomaPedidosService.Customers"/>
+                <EntitySet Name="Products" EntityType="TomaPedidosService.Products"/>
+                <EntitySet Name="OrdersHeader" EntityType="TomaPedidosService.OrdersHeader">
+                    <NavigationPropertyBinding Path="ITEMS" Target="OrdersItem"/>
+                </EntitySet>
+                <EntitySet Name="OrdersItem" EntityType="TomaPedidosService.OrdersItem">
+                    <NavigationPropertyBinding Path="OrderHeader" Target="OrdersHeader"/>
+                </EntitySet>
+                <EntitySet Name="CustomerPromotions" EntityType="TomaPedidosService.CustomerPromotions"/>
+                <EntitySet Name="Promotions" EntityType="TomaPedidosService.Promotions"/>
+                <EntitySet Name="Invoices" EntityType="TomaPedidosService.Invoices"/>
+                <EntitySet Name="Credit" EntityType="TomaPedidosService.Credit"/>
+                <EntitySet Name="CustomerProducts" EntityType="TomaPedidosService.CustomerProducts"/>
+            </EntityContainer>
+            <EntityType Name="Customers">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="NAME" Type="Edm.String"/>
+                <Property Name="PDV_CODE" Type="Edm.String"/>
+                <Property Name="CUSTOMER_ROLE" Type="Edm.String"/>
+                <Property Name="SALES_ORGANIZATION" Type="Edm.String"/>
+                <Property Name="DISTRIBUTION_CHANNEL" Type="Edm.String"/>
+                <Property Name="DIVISION" Type="Edm.String"/>
+                <Property Name="IS_ECOMMERCE" Type="Edm.Boolean"/>
+                <Property Name="SUPERVISION_ZONE" Type="Edm.String"/>
+                <Property Name="GRADE" Type="Edm.String"/>
+                <Property Name="MAIN_CONTACT_INFO" Type="Edm.String"/>
+                <Property Name="FIELD_TEST" Type="Edm.String"/>
+                <Property Name="CUSTOMER_GROUP" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Products">
+                <Key>
+                    <PropertyRef Name="ProductID"/>
+                </Key>
+                <Property Name="ProductID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="Name" Type="Edm.String"/>
+                <Property Name="Category" Type="Edm.String"/>
+                <Property Name="SalesUnit" Type="Edm.String"/>
+                <Property Name="DistributionCenter" Type="Edm.String"/>
+                <Property Name="FullBox" Type="Edm.Boolean"/>
+                <Property Name="MinimumBoxAmount" Type="Edm.Decimal" Scale="variable"/>
+                <Property Name="IsActive" Type="Edm.Boolean"/>
+                <Property Name="MaterialGroup" Type="Edm.String"/>
+                <Property Name="Weight" Type="Edm.Decimal" Scale="variable"/>
+                <Property Name="ContainerID" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="OrdersHeader">
+                <Key>
+                    <PropertyRef Name="ID"/>
+                </Key>
+                <Property Name="ID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <NavigationProperty Name="ITEMS" Type="Collection(TomaPedidosService.OrdersItem)" Partner="OrderHeader">
+                    <OnDelete Action="Cascade"/>
+                </NavigationProperty>
+                <Property Name="DOCUMENT_TYPE" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="OrdersItem">
+                <Key>
+                    <PropertyRef Name="OrderHeader_ID"/>
+                </Key>
+                <NavigationProperty Name="OrderHeader" Type="TomaPedidosService.OrdersHeader" Partner="ITEMS">
+                    <ReferentialConstraint Property="OrderHeader_ID" ReferencedProperty="ID"/>
+                </NavigationProperty>
+                <Property Name="OrderHeader_ID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="PRODUCT_CODE" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="CustomerPromotions">
+                <Key>
+                    <PropertyRef Name="CustomerID"/>
+                    <PropertyRef Name="PromotionID"/>
+                </Key>
+                <Property Name="CustomerID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="PromotionID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+            </EntityType>
+            <EntityType Name="Promotions">
+                <Key>
+                    <PropertyRef Name="MATERIAL"/>
+                </Key>
+                <Property Name="MATERIAL" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="GrupoMaterial" Type="Edm.String" MaxLength="30"/>
+                <Property Name="CANAL" Type="Edm.String"/>
+                <Property Name="Condicion_Precio_1" Type="Edm.String"/>
+                <Property Name="Condicion_Precio_2" Type="Edm.String"/>
+                <Property Name="Condicion_Precio_3" Type="Edm.String"/>
+                <Property Name="Condicion_Precio_5" Type="Edm.String"/>
+                <Property Name="Condicion_Precio_4" Type="Edm.String"/>
+                <Property Name="descripcionPromocion" Type="Edm.String"/>
+                <Property Name="KOSRT" Type="Edm.String"/>
+                <Property Name="KZUSTEA" Type="Edm.String"/>
+                <Property Name="NIVEL1_SC" Type="Edm.String"/>
+                <Property Name="NIVEL2" Type="Edm.String"/>
+                <Property Name="NIVEL1" Type="Edm.String"/>
+                <Property Name="NIVEL2_SC" Type="Edm.String"/>
+                <Property Name="NIVEL3" Type="Edm.String"/>
+                <Property Name="NIVEL3_SC" Type="Edm.String"/>
+                <Property Name="NIVEL4" Type="Edm.String"/>
+                <Property Name="NIVEL4_SC" Type="Edm.String"/>
+                <Property Name="NIVEL5" Type="Edm.String"/>
+                <Property Name="NIVEL5_SC" Type="Edm.String"/>
+                <Property Name="PORCENTAGE1" Type="Edm.String"/>
+                <Property Name="PORCENTAGE3" Type="Edm.String"/>
+                <Property Name="PORCENTAGE4" Type="Edm.String"/>
+                <Property Name="PORCENTAGE2" Type="Edm.String"/>
+                <Property Name="PORCENTAGE5" Type="Edm.String"/>
+                <Property Name="RUTA" Type="Edm.String"/>
+                <Property Name="TIPO" Type="Edm.String"/>
+                <Property Name="topeDescuento" Type="Edm.String"/>
+                <Property Name="DATAB" Type="Edm.String"/>
+                <Property Name="DATBI" Type="Edm.String"/>
+                <Property Name="GrupoMagico" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Invoices">
+                <Key>
+                    <PropertyRef Name="KUNNR"/>
+                </Key>
+                <Property Name="KUNNR" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="VBELN" Type="Edm.String"/>
+                <Property Name="VFIJO" Type="Edm.String"/>
+                <Property Name="FKART" Type="Edm.String"/>
+                <Property Name="XREF3" Type="Edm.String"/>
+                <Property Name="BLDAT" Type="Edm.String"/>
+                <Property Name="IIMPR" Type="Edm.String"/>
+                <Property Name="ZBD1T" Type="Edm.String"/>
+                <Property Name="NAME1" Type="Edm.String"/>
+                <Property Name="MANDT" Type="Edm.String"/>
+                <Property Name="COD_RESP" Type="Edm.String"/>
+                <Property Name="SRTYPE" Type="Edm.String"/>
+                <Property Name="RSTGR" Type="Edm.String"/>
+                <Property Name="WRBTR" Type="Edm.String"/>
+                <Property Name="BLART" Type="Edm.String"/>
+                <Property Name="STCEG" Type="Edm.String"/>
+                <Property Name="FILKD" Type="Edm.String"/>
+                <Property Name="CCBTC" Type="Edm.String"/>
+            </EntityType>
+            <EntityType Name="Credit">
+                <Key>
+                    <PropertyRef Name="CustomerID"/>
+                </Key>
+                <Property Name="CustomerID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="TOTAL" Type="Edm.Decimal" Scale="variable"/>
+                <Property Name="BALANCE" Type="Edm.Decimal" Scale="variable"/>
+            </EntityType>
+            <EntityType Name="CustomerProducts">
+                <Key>
+                    <PropertyRef Name="CustomerID"/>
+                    <PropertyRef Name="ProductID"/>
+                </Key>
+                <Property Name="CustomerID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="ProductID" Type="Edm.String" MaxLength="30" Nullable="false"/>
+                <Property Name="ListType" Type="Edm.String"/>
+            </EntityType>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

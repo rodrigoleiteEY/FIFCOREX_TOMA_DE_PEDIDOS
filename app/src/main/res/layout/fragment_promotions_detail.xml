@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:context=".mdui.promotions.PromotionsActivity">
+    <data>
+        <import type = "com.sap.cloud.android.odata.entitycontainer.Promotions" />
+        <variable name="promotions" type="Promotions"/>
+        <variable name="handler" type="com.company.fifcorex_toma_de_pedidos.mdui.promotions.PromotionsDetailFragment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.coordinatorlayout.widget.CoordinatorLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/item_detail_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Material"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.material).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="GrupoMaterial"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.grupoMaterial).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Canal"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.canal).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CondicionPrecio1"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.condicionPrecio1).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CondicionPrecio2"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.condicionPrecio2).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CondicionPrecio3"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.condicionPrecio3).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CondicionPrecio5"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.condicionPrecio5).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="CondicionPrecio4"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.condicionPrecio4).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="DescripcionPromocion"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.descripcionPromocion).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Kosrt"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.kosrt).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Kzustea"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.kzustea).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel1Sc"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel1Sc).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel2"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel2).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel1"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel1).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel2Sc"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel2Sc).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel3"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel3).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel3Sc"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel3Sc).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel4"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel4).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel4Sc"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel4Sc).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel5"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel5).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Nivel5Sc"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.nivel5Sc).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Porcentage1"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.porcentage1).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Porcentage3"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.porcentage3).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Porcentage4"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.porcentage4).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Porcentage2"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.porcentage2).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Porcentage5"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.porcentage5).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Ruta"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.ruta).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Tipo"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.tipo).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="TopeDescuento"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.topeDescuento).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Datab"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.datab).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="Datbi"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.datbi).toString()}" />
+
+                    <com.sap.cloud.mobile.fiori.misc.KeyValueCell
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:keyText="GrupoMagico"
+                        app:valueText="@{promotions.getOptionalValue(Promotions.grupoMagico).toString()}" />
+
+                </LinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </LinearLayout>
+</layout>

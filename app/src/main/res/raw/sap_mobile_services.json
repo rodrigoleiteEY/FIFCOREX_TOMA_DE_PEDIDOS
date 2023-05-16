@@ -1,0 +1,18 @@
+{
+  "__comment": "When modifying this file, you need to reset or reinstall all current client installations",
+  "auth": [{
+      "type": "oauth2",
+      "config": {
+        "oauth2.clients": [
+
+          { "clientID": "45c0246c-ea68-4d85-9c42-ddeb0603696b", "redirectURL": "https://fifcorex-mbade715-hanacloudspace-mbs-toma-de-pedidos.cfapps.us30.hana.ondemand.com", "grantType": "authorization_code" }
+        ],
+        "oauth2.tokenEndpoint": "https://fifcorex-mbade715-hanacloudspace-mbs-toma-de-pedidos.cfapps.us30.hana.ondemand.com/oauth2/api/v1/token",
+        "oauth2.authorizationEndpoint": "https://fifcorex-mbade715-hanacloudspace-mbs-toma-de-pedidos.cfapps.us30.hana.ondemand.com/oauth2/api/v1/authorize"
+      },
+      "requireOtp": false
+    }],
+  "ServiceUrl" : "https://fifcorex-mbade715-hanacloudspace-mbs-toma-de-pedidos.cfapps.us30.hana.ondemand.com/",
+  "appID": "MBS-Toma-De-Pedidos",
+  "multiUser": true
+}

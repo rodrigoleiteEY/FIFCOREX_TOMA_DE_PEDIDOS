@@ -1,0 +1,17 @@
+   ______________________________
+ / \                             \.
+|   | This log file was created  |.
+ \_ | by the Wizard, it contains |.
+    | the configuration data     |.
+    | used for the application   |.
+    | generation.                |.
+    |                            |.
+    | It shouldn't be edited     |.
+    | manually, changing it      |.
+    | won't affect the generated |.
+    | sample.                    |.
+    |   _________________________|___
+    |  /                            /.
+    \_/____________________________/.
+
+{"projectName":"FIFCOREX_TOMA_DE_PEDIDOS","projectLocation":"C:\\Users\\xrodr\\AndroidStudioProjects\\FIFCOREX_TOMA_DE_PEDIDOS","projectNamespace":"com.company.fifcorex_toma_de_pedidos","accountName":"FIFCO_MOBILE_BTP","serviceURL":"https://fifcorex-mbade715-hanacloudspace-mbs-toma-de-pedidos.cfapps.us30.hana.ondemand.com/","serverURL":"https://mobile-service-cockpit-web.cfapps.us30.hana.ondemand.com/cockpit/v1/org/ea3eee1e-d1c8-477c-bce8-18f8cd0a2be5/space/316e0bff-9a5b-4a0a-a3cf-807b9bbfe5ca/","applicationID":"MBS-Toma-De-Pedidos","applicationSecurityConfig":"OAUTH","jsonPath":null,"senderID":null,"serverKey":null,"isLogEnabled":true,"isLogUploadEnabled":true,"SAPSDKLocation":"MAVEN_LOCAL","activationType":"appConfigFile","generateJavaCode":false,"generateOnlineApp":false,"isUsageIncluded":false,"isCrashReportIncluded":false,"isMultipleUserMode":true}
